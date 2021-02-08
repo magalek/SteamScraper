@@ -6,7 +6,7 @@ namespace SteamScraper {
         public const string Action = "19";
         public const string Indie = "2C492";
 
-        public static string Get(params string[] tags) {
+        internal static string Get(params string[] tags) {
             StringBuilder builder = new StringBuilder();
             builder.Append("&tags=");
             

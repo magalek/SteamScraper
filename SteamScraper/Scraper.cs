@@ -10,12 +10,12 @@ namespace SteamScraper {
     public class Scraper {
         
         // ReSharper disable once UnusedMember.Global
-        public List<Game> Scrap(/*params string[] tags*/) {
+        public List<Game> Scrap(params string[] tags) {
             HtmlWeb web = new HtmlWeb();
 
             string steamUrl = "https://store.steampowered.com/search/?sort_by=Released_DESC&category3=1";
 
-            //if (tags.Length > 0) steamUrl += Categories.Get(tags);
+            if (tags.Length > 0) steamUrl += Categories.Get(tags);
 
             HtmlDocument document = web.Load(steamUrl);
             

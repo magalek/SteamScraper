@@ -7,8 +7,7 @@ namespace SteamScraper.Tests {
         [Test]
         public void InvokesSuccessfully() {
             Scraper scraper = new Scraper();
-            List<Game> games;
-            Assert.DoesNotThrow(() => games = scraper.Scrap());
+            Assert.DoesNotThrow(() => scraper.Scrap());
         }
         
         [Test]
